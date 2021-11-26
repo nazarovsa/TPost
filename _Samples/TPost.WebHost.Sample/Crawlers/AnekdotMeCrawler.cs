@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
-using TPost.Domain;
+using TPost.Core;
 
 namespace TPost.Host.Sample.Crawlers
 {

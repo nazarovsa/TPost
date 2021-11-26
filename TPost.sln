@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPost.Domain", "TPost.Domain\TPost.Domain.csproj", "{977D7E0E-1E3B-4210-A70E-3C0656859FB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPost.Core", "TPost.Core\TPost.Core.csproj", "{977D7E0E-1E3B-4210-A70E-3C0656859FB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPost.Host", "TPost.WebHost\TPost.Host.csproj", "{9AD4F46F-361D-4C84-A28A-55730D1DA9DC}"
 EndProject

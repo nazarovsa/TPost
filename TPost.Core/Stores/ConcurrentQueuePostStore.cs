@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TPost.Domain.Stores
+namespace TPost.Core.Stores
 {
     public sealed class ConcurrentQueuePostStore : IPostStore
     {

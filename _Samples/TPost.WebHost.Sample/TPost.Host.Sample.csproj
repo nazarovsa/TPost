@@ -19,7 +19,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\Publishers\TPost.Publishers.Telegram\TPost.Publishers.Telegram.csproj" />
-        <ProjectReference Include="..\..\TPost.Domain\TPost.Domain.csproj" />
+        <ProjectReference Include="..\..\TPost.Core\TPost.Core.csproj" />
         <ProjectReference Include="..\..\TPost.Publishers.Telegram\TPost.Publishers.Telegram.csproj" />
         <ProjectReference Include="..\..\TPost.WebHost\TPost.Host.csproj" />
     </ItemGroup>

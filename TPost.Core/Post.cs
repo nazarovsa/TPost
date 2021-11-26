@@ -1,6 +1,6 @@
 using System;
 
-namespace TPost.Domain
+namespace TPost.Core
 {
     public class Post : IPost
     {

@@ -1,4 +1,4 @@
-namespace TPost.Domain
+namespace TPost.Core
 {
     public interface IPost
     {

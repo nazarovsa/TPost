@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TPost.Domain
+namespace TPost.Core
 {
     public interface IPostCrawlerManager
     {

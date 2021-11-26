@@ -4,7 +4,7 @@ using System.ServiceModel.Syndication;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
-using TPost.Domain;
+using TPost.Core;
 
 namespace TPost.Host.Sample.Crawlers
 {

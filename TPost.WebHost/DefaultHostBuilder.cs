@@ -3,8 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Quartz;
 using Serilog;
-using TPost.Domain;
-using TPost.Domain.Publishers;
+using TPost.Core;
+using TPost.Core.Publishers;
 using TPost.Host.Quartz;
 
 namespace TPost.Host

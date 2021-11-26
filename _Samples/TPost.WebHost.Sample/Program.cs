@@ -1,10 +1,10 @@
 using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TPost.Domain;
-using TPost.Domain.Crawlers;
-using TPost.Domain.Publishers;
-using TPost.Domain.Stores;
+using TPost.Core;
+using TPost.Core.Crawlers;
+using TPost.Core.Publishers;
+using TPost.Core.Stores;
 using TPost.Host.Sample.Crawlers;
 
 namespace TPost.Host.Sample

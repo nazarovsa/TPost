@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Quartz;
-using TPost.Domain;
+using TPost.Core;
 
 namespace TPost.Host.Quartz
 {

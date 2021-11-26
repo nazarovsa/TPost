@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using Telegram.Bot;
 using Telegram.Bot.Types.Enums;
-using TPost.Domain;
+using TPost.Core;
 
 namespace TPost.Publishers.Telegram
 {
