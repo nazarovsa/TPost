@@ -1,5 +1,4 @@
-name: Pull request build & test
-
+name: Build & test
 on:
   pull_request:
     branches:
@@ -7,12 +6,9 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core

@@ -1,10 +1,8 @@
-name: .NET
-
+name: Publish nuget packages
 on:
   push:
     tags: 
       - '*.*.*'
-
 jobs:
   build:
     runs-on: ubuntu-latest

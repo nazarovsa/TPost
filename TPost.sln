@@ -18,6 +18,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPost.Core", "src\TPost.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPost.Publishers.Telegram", "src\TPost.Publishers.Telegram\TPost.Publishers.Telegram.csproj", "{0D72B6E9-58DC-49EE-9505-AF9D3FE54FE7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github Actions", "Github Actions", "{EC04AAF3-A336-4518-906A-66920C951AEA}"
+ProjectSection(SolutionItems) = preProject
+	.github\workflows\dotnet-core.yml = .github\workflows\dotnet-core.yml
+	.github\workflows\publish.yml = .github\workflows\publish.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +50,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{049879D9-1751-403F-A907-23870DA5E492} = {B041C6A7-7BF2-4D88-B56B-7A18743226C5}
 		{0D72B6E9-58DC-49EE-9505-AF9D3FE54FE7} = {139EF17F-B018-41DA-902C-D7F70C03C58D}
+		{EC04AAF3-A336-4518-906A-66920C951AEA} = {3ADE4FF3-776A-4D09-8329-7A1F8938021E}
 	EndGlobalSection
 EndGlobal
