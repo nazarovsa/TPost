@@ -32,12 +32,11 @@ namespace TPost.Hosting.Quartz
             if (post == null)
             {
                 await _crawlerManager.RenewPostStore();
+                post = await _store.GetAndRemoveOne(CancellationToken.None);
             }
-            else
-            {
-                await _postPublisher.Publish(post);
-                _logger.LogInformation("Post published: {@post}", post);
-            }
+
+            await _postPublisher.Publish(post);
+            _logger.LogInformation("Post published: {@post}", post);
         }
     }
 }
