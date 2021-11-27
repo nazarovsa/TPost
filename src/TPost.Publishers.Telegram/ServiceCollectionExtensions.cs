@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Telegram.Bot;
+using TPost.Core;
 
 namespace TPost.Publishers.Telegram
 {
@@ -16,11 +17,12 @@ namespace TPost.Publishers.Telegram
         public static IServiceCollection AddTelegramBotPublisher(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddHttpClient();
-
             services.Configure<TelegramPublisherOptions>(configuration.GetSection(nameof(TelegramPublisherOptions)));
+            
+            services.AddScoped<IPostPublisher, TelegramPostPublisher>();
             services.AddTransient<ITelegramBotClient, TelegramBotClient>(c =>
                 new TelegramBotClient(c.GetRequiredService<IOptions<TelegramPublisherOptions>>().Value.Token,
-                    c.GetService<IHttpClientFactory>().CreateClient()));
+                    c.GetRequiredService<IHttpClientFactory>().CreateClient()));
             
             return services;
         }
