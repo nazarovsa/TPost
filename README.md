@@ -2,7 +2,7 @@
 
 [![Build & test](https://github.com/nazarovsa/TPost/actions/workflows/dotnet-core.yml/badge.svg)](https://github.com/nazarovsa/TPost/actions/workflows/dotnet-core.yml)
 
-TPost is a starter project for app which can crawl web sites and make post in different sources, for example: It can use telegram bot to publish post into telegram channel.
+TPost is a starter project for an app that can crawl websites and make posts in different sources, for example, It can use a telegram bot to publish posts into the telegram channel.
 
 ## How to start?
 In progress...
@@ -37,8 +37,8 @@ In progress...
 
 ## Sample
 You can find working sample in *_Samples/TPost.Host.Sample* [folder](https://github.com/nazarovsa/TPost/tree/main/_Samples/TPost.WebHost.Sample).
-This sample crawling jokes from two sites and publishing them into console. As you can see it just implements two crawlers and registering them in host.  
-I have real project, which works like that and it posts jokes into [@cringedot](https://t.me/cringedot) telegram channel.
+This sample crawling jokes from two sites and publishing them into a console. As you can see, it just implements two crawlers and registers them in a host.  
+I have a real project, which works like that, and it posts jokes into [@cringedot](https://t.me/cringedot) Telegram channel.
 
 ## List of Packages
 | Package Name                                                                             | Version                                                                                                                                 | Downloads                                                                                                                                       | Description                           |
