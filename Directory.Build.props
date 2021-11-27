@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<MicrosoftVersion>5.0.0</MicrosoftVersion>
+		<MicrosoftVersion>6.0.0</MicrosoftVersion>
 		<QuartzVersion>3.3.3</QuartzVersion>
 	</PropertyGroup>
 </Project>

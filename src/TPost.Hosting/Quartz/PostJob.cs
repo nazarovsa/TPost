@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using Quartz;
 using TPost.Core;
 
-namespace TPost.Host.Quartz
+namespace TPost.Hosting.Quartz
 {
     public sealed class PostJob : IJob
     {
@@ -27,14 +27,15 @@ namespace TPost.Host.Quartz
 
         public async Task Execute(IJobExecutionContext context)
         {
-            if (_store.Count == 0)
-                await _crawlerManager.RenewPostStore();
-
             var post = await _store.GetAndRemoveOne(CancellationToken.None);
-            if (post != null)
+
+            if (post == null)
+            {
+                await _crawlerManager.RenewPostStore();
+            }
+            else
             {
                 await _postPublisher.Publish(post);
-
                 _logger.LogInformation("Post published: {@post}", post);
             }
         }

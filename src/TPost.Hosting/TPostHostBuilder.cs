@@ -5,11 +5,11 @@ using Quartz;
 using Serilog;
 using TPost.Core;
 using TPost.Core.Publishers;
-using TPost.Host.Quartz;
+using TPost.Hosting.Quartz;
 
-namespace TPost.Host
+namespace TPost.Hosting
 {
-    public sealed class DefaultHostBuilder
+    public sealed class TPostHostBuilder
     {
         public static IHostBuilder GetBuilder(params string[] args)
         {

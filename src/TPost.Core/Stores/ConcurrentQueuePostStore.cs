@@ -30,7 +30,5 @@ namespace TPost.Core.Stores
 
             return Task.CompletedTask;
         }
-
-        public int Count => _queue.Count;
     }
 }

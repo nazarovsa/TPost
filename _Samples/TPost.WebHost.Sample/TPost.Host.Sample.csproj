@@ -1,27 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
+        <IsPackable>false</IsPackable>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
         <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="HtmlAgilityPack" Version="1.11.36" />
-        <PackageReference Include="Quartz" Version="$(QuartzVersion)" />
-        <PackageReference Include="Quartz.Extensions.DependencyInjection" Version="$(QuartzVersion)" />
-        <PackageReference Include="Quartz.Extensions.Hosting" Version="$(QuartzVersion)" />
         <PackageReference Include="System.ServiceModel.Syndication" Version="$(MicrosoftVersion)" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Publishers\TPost.Publishers.Telegram\TPost.Publishers.Telegram.csproj" />
-        <ProjectReference Include="..\..\TPost.Core\TPost.Core.csproj" />
-        <ProjectReference Include="..\..\TPost.Publishers.Telegram\TPost.Publishers.Telegram.csproj" />
-        <ProjectReference Include="..\..\TPost.WebHost\TPost.Host.csproj" />
+      <ProjectReference Include="..\..\src\TPost.Core\TPost.Core.csproj" />
+      <ProjectReference Include="..\..\src\TPost.Hosting\TPost.Hosting.csproj" />
     </ItemGroup>
+
 
 </Project>

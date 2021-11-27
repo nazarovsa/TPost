@@ -6,6 +6,7 @@ using TPost.Core.Crawlers;
 using TPost.Core.Publishers;
 using TPost.Core.Stores;
 using TPost.Host.Sample.Crawlers;
+using TPost.Hosting;
 
 namespace TPost.Host.Sample
 {
@@ -13,12 +14,12 @@ namespace TPost.Host.Sample
     {
         public static void Main(string[] args)
         {
-            DefaultHostBuilder.GetBuilder(args)
+            var host = TPostHostBuilder.GetBuilder(args)
                 .ConfigureServices((ctx, services) =>
                 {
                     // Uncomment to add telegram bot publisher
                     // services.AddTelegramBotPublisher(ctx.Configuration);
-                    
+
                     services.AddScoped<IPostCrawler, AnekdotMeCrawler>();
                     services.AddScoped<IPostCrawler, AnekdotRuCrawler>();
                     services.AddScoped<IPostCrawlerManager, DefaultPostCrawlerManager>();
@@ -28,12 +29,13 @@ namespace TPost.Host.Sample
                     // Uncomment to use telegram publisher
                     // services.AddScoped<IPostPublisherTransport, TelegramPostPublisher>();
                     services.AddScoped<IPostPublisherTransport, ConsolePostPublisher>();
-                    
+
                     // Used just for current sample to make crawlers work
                     Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
                 })
-                .Build()
-                .Run();
+                .Build();
+            
+                host.Run();
         }
     }
 }
