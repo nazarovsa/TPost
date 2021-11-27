@@ -26,8 +26,6 @@ namespace TPost.Host.Sample
 
                     services.AddSingleton<IPostStore, ConcurrentQueuePostStore>();
 
-                    // Uncomment to use telegram publisher
-                    // services.AddScoped<IPostPublisherTransport, TelegramPostPublisher>();
                     services.AddScoped<IPostPublisherTransport, ConsolePostPublisher>();
 
                     // Used just for current sample to make crawlers work
