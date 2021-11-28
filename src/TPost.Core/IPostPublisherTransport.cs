@@ -1,10 +1,6 @@
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace TPost.Core
 {
-    public interface IPostPublisherTransport
+    public interface IPostPublisherTransport : IPostPublisher
     {
-        Task Publish(IPost post, CancellationToken cancellationToken = default);
     }
 }
