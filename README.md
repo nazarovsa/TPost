@@ -13,23 +13,35 @@ In progress...
 
 ### IPostCrawler
 
-In progress...
+Crawler extracts required content from a web page and returns posts.  
+Interface for crawlers, it has single method `GetPosts`, which returns `IReadOnlyCollection<IPost>`.  
+For example, you can implement crawler using [HtmlAgilityPack](https://html-agility-pack.net/).
 
 ### IPostCrawlerManager
 
-In progress...
+Crawler manager takes all crawlers from DI container and refill store with posts.
+Default implementations is: [`DefaultPostCrawlerManager`](https://github.com/nazarovsa/TPost/blob/main/src/TPost.Core/Crawlers/DefaultPostCrawlerManager.cs).
+`DefaultPostCrawlerManager` takes `count / n` posts from each registered crawler. Where `count` is argument of method `RenewPostStore` (10 by default) and `n` is amount of registered in DI `IPostCrawler`'s.
 
 ### IPostStore
 
-In progress...
+Post store stores crawled posts.  
+Default implemetation is: [`ConcurrentQueuePostStore`](https://github.com/nazarovsa/TPost/blob/main/src/TPost.Core/Stores/ConcurrentQueuePostStore.cs).  
+`GetAndRemoveOne` method takes one post from a store and removes it. If you want to use the persistent store, and want to save published posts.  You should implement a mechanism, that will not return already published posts. (Extra column in a table like `IsPublished`, etc.)
 
 ### IPostPublisher
 
-In progress...
+Interface for post publisher.  
+Default implementation is [`CompositePostPuiblisher`](https://github.com/nazarovsa/TPost/blob/main/src/TPost.Core/Publishers/CompositePostPublisher.cs), which takes all `IPostPublisherTransport` from DI container and calls `Publish` method on them.
 
 ### IPostPublisherTransport
 
-In progress...
+Publisher transport. Inherits from `IPostPublisher`. Added to make `CompositePostPuiblisher` work.
+By default behavior, you need to implement just that interface. It will allow you to have multiple publish destinations.
+
+### PostJob
+
+Post job takes post from the store and publishes it to registered `IPostPublisher` by cron schedule.  
 
 ## Publishers
 
