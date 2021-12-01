@@ -45,7 +45,8 @@ Post job takes post from the store and publishes it to registered `IPostPublishe
 
 ## Publishers
 
-In progress...
+Publishers used to publish posts to different destinations.  
+If you want to use a custom publisher, implement the [`IPostPublisherTransport`](https://github.com/nazarovsa/TPost/blob/main/src/TPost.Core/IPostPublisherTransport.cs) interface. In the default implementation, it will be used by `CompositePostPublisher`, but you can register it as a single publisher by removing registration for `IPostPublisher` из `IServiceCollection` which occurs at TPostHostFactory.
 
 ## Sample
 You can find working sample in *_Samples/TPost.Host.Sample* [folder](https://github.com/nazarovsa/TPost/tree/main/_Samples/TPost.WebHost.Sample).
